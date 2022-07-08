@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.NewsDetailsActivity"
+    android:background="@color/black_shade1">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/ToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_shade1"
+        app:title="Fresh News"
+        app:titleTextColor="@color/pink" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll1"
+        android:layout_below="@id/ToolBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/IVNews"
+                android:padding="3dp"
+                android:layout_margin="3dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:id="@+id/TVTitle"
+                android:layout_below="@id/IVNews"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/pink"
+                android:padding="5dp"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sub Title"
+                android:id="@+id/TVSubTitle"
+                android:layout_below="@id/TVTitle"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/pink"
+                android:padding="5dp"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sub Title"
+                android:id="@+id/TVContent"
+                android:layout_below="@id/TVSubTitle"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:layout_margin="5dp" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+<!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Read Full News"-->
+<!--        android:background="@color/yellow"-->
+<!--        app:backgroundTint="@color/yellow"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:id="@+id/BtnReadNews"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginBottom="20dp" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll1"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_margin="1dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:id="@+id/BtnReadNews"
+            android:text="Read Full News"
+            app:backgroundTint="@color/pink"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:padding="4dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:id="@+id/BtnShareNews"
+            app:backgroundTint="@color/pink"
+            android:text="Share News"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:padding="4dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
